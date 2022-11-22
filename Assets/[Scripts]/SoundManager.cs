@@ -120,8 +120,6 @@ public class SoundManager : MonoBehaviour
             yield return new WaitForSeconds(factor);
             tmpVolume += factor;
             source.volume = tmpVolume;
-            Debug.Log("Time = " + Time.time);
-            Debug.Log("vol = " + tmpVolume);
             if (source.volume >= 1.0f)
             {
                 break;

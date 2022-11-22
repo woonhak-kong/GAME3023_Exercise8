@@ -8,7 +8,7 @@ public class PlaySceneUIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SoundManager.Instance.PlayBgm("PlayScene", 5.0f);
+        SoundManager.Instance.PlayBgm("PlayScene", 2.0f);
     }
 
     // Update is called once per frame

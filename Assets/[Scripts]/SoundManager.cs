@@ -37,6 +37,8 @@ public class SoundManager : MonoBehaviour
         }
         bgm1 = gameObject.AddComponent<AudioSource>();
         bgm2 = gameObject.AddComponent<AudioSource>();
+        bgm1.volume = 0.0f;
+        bgm2.volume = 0.0f;
         //foreach(var sound in sounds)
         //{
         //    sound.source = gameObject.AddComponent<AudioSource>();
@@ -47,8 +49,8 @@ public class SoundManager : MonoBehaviour
         //}
         // master volume
         //AudioListener.volume = 0.02f;
-        
-        
+
+
     }
 
 
@@ -70,7 +72,7 @@ public class SoundManager : MonoBehaviour
         {
             return;
         }
-
+        StopAllCoroutines();
         CustomAudio sound = Array.Find(backgroundSoundClips, source => source.name == audioName);
 
         if(bgm1.isPlaying)
@@ -106,7 +108,7 @@ public class SoundManager : MonoBehaviour
     {
         //float cofactor = 1.0f / (duration * 100.0f);
         //float cofactor = 1.0f * Time.deltaTime / duration;
-        source.volume = 0.0f;
+        //source.volume = 0.0f;
         source.loop = true;
         source.Play();
 
@@ -131,8 +133,8 @@ public class SoundManager : MonoBehaviour
     {
         //float cofactor = 1.0f / (duration * 100.0f);
         //float cofactor = 1.0f * Time.deltaTime / duration;
-        source.Play();
-        source.volume = 1.0f;
+        //source.Play();
+        //source.volume = 1.0f;
 
         float factor = 0.01f / (duration * 2.0f);
 

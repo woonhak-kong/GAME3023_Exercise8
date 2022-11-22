@@ -51,6 +51,7 @@ public class BattleSceneManager : MonoBehaviour
 
     public void UnLoadScene()
     {
+        SoundManager.Instance.PlayBgm("PlayScene", 5.0f);
         SceneManager.UnloadScene("BattleScene");
     }
 }

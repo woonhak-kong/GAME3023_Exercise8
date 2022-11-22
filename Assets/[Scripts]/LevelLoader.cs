@@ -16,6 +16,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadBattleScene()
     {
         LoadLevelByName("BattleScene");
+        SoundManager.Instance.PlayBgm("BattleScene", 5.0f);
     }
 
 
